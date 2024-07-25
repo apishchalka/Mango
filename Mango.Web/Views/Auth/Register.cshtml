@@ -1,0 +1,46 @@
+﻿@model UserRegisterRequestDTO
+
+<form method="post" asp-action="Register" asp-controller="Auth">
+    <div class="container border p-4">
+        <div class="row text-center">
+            <h1>Sign Up</h1>
+        </div>
+       <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="Name" class="form-control" placeholder="Full Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="PhoneNumber" class="form-control" placeholder="Phone" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <input asp-for="Password" class="form-control" placeholder="Passowrd" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+               <select asp-items="@ViewBag.Roles" asp-for="Role" class="form-control">
+                   <option disabled selected>--Select Role--</option>
+               </select>
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3 pb-2">
+                <button type="submit" class="form-control btn btn-success" value="Submit">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</form>

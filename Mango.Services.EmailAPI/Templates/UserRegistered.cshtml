@@ -1,0 +1,68 @@
+﻿@using Mango.Services.EmailAPI.Dto
+@model UserRegisterRequestDTO
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to [Your App Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Mango, @Model.Name!</h2>
+        <p>Dear @Model.Name,</p>
+        <p>We're excited to have you on board. Your account has been successfully created. To get started, please confirm your email address by clicking the button below:</p>
+        <p>If you did not create an account with us, please ignore this email.</p>
+        <p>Thank you,</p>
+        <p>The Mango Team</p>
+        <div class="footer">
+            <p>© 2024 Mango. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+

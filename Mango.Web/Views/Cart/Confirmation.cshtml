@@ -1,0 +1,17 @@
+﻿@model ConfirmationDto
+
+<div class="text-center">
+    @if(Model.IsApproved)
+    {
+        <h1 class="text-info pt-4">Congratulations! You are one step closer to amazing food.</h1>
+        <p class="pb-3">We have received your order and will  be ready in 30 minutes during regular business hours.</p>
+        <h4 class="text-warning pb-3">Order ID - @Model.OrderId</h4>
+        <img src="~/images/order.PNG" width="80%"/>
+    }
+    else
+    {
+        <h1 class="text-warning pt-4">Your order has not been approved yet.</h1>
+        <h4 class="text-warning pt-4">Please check if you already paid the order.</h4>
+        <h4 class="text-warning pb-3">Order ID - @Model.OrderId</h4>
+    }
+</div>
